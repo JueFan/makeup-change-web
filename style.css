@@ -1,0 +1,563 @@
+/* General Styles */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --accent-color: #28a745;
+    --background-light: #f8f9fa;
+    --background-dark: #e9ecef;
+    --text-color-dark: #343a40;
+    --text-color-light: #6c757d;
+    --border-color: #dee2e6;
+    --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    --border-radius: 8px;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-color-dark);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: var(--text-color-dark);
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+    text-decoration: none; /* Ensure links styled as buttons don't have underline */
+}
+
+.btn.primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+}
+
+.btn.primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+}
+
+.btn.secondary {
+    background-color: var(--background-dark);
+    color: var(--text-color-dark);
+    border: 1px solid var(--border-color);
+}
+
+.btn.secondary:hover {
+    background-color: #d3d9df;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Card Styles */
+.card {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    padding: 25px;
+    margin-bottom: 20px; /* Add some spacing between cards */
+}
+
+/* Header - Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #fceabb, #f8b500); /* 参考图片中的暖色渐变 */
+    color: var(--text-color-dark); /* 调整文字颜色以适应新的背景 */
+    padding: 80px 0; /* 调整内边距 */
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.hero-main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px; /* 左右两列之间的间距 */
+    text-align: left; /* 左侧文字内容左对齐 */
+}
+
+.hero-text-content {
+    flex: 1;
+    max-width: 600px; /* 限制文字内容的宽度 */
+}
+
+.hero-section h1 {
+    font-size: 3.8rem; /* 增大字体 */
+    margin-bottom: 20px;
+    color: var(--text-color-dark); /* 调整颜色 */
+    line-height: 1.1;
+    font-weight: 900; /* 更粗的字体 */
+}
+
+.hero-section .subtitle {
+    font-size: 1.4rem; /* 增大字体 */
+    margin-bottom: 40px;
+    opacity: 0.8;
+    max-width: 700px;
+    color: var(--text-color-dark); /* 调整颜色 */
+}
+
+.hero-image-placeholder {
+    flex: 1;
+    min-height: 400px; /* 预留图片高度 */
+    background-color: rgba(255, 255, 255, 0.3); /* 浅色背景占位 */
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--text-color-light);
+    border: 2px dashed rgba(255, 255, 255, 0.5);
+}
+
+/* Main Content Sections */
+main section {
+    padding: 40px 0;
+    margin-bottom: 30px;
+}
+
+main section:nth-child(even) {
+    background-color: var(--background-dark);
+}
+
+/* AI Try-on Tool Section */
+.ai-tryon-tool-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.ai-tryon-tool-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+.left-panel, .right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.left-panel .card, .right-panel .card {
+    flex: 1; /* Allow cards to grow and fill space */
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--text-color-dark);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Upload Section */
+.upload-area {
+    border: 2px dashed var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-area:hover {
+    border-color: var(--primary-color);
+    background-color: #f0f7ff;
+}
+
+.upload-label {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+}
+
+.image-preview {
+    max-width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+    background-color: var(--background-light);
+    border: 1px solid var(--border-color);
+}
+
+/* Garment Selection */
+.garment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 15px;
+    padding-top: 10px;
+}
+
+.garment-item {
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    padding-bottom: 100%; /* Makes items square */
+}
+
+.garment-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.garment-item.selected {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+    transform: scale(1.05);
+}
+
+/* Result Section */
+.result-display {
+    position: relative;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-light);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border-radius: var(--border-radius);
+    z-index: 10;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: var(--primary-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    justify-content: center;
+}
+
+/* How It Works Section */
+.how-it-works-section {
+    text-align: center;
+    background-color: #fff;
+}
+
+.how-it-works-section h2 {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.how-it-works-section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.step-item {
+    background-color: var(--background-light);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.step-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.step-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(0, 123, 255, 0.1);
+    font-weight: bold;
+}
+
+.step-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Use Cases Section */
+.use-cases-section {
+    text-align: center;
+}
+
+.use-cases-section h2 {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.use-cases-section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.case-item {
+    text-align: left;
+    padding: 30px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.case-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.case-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* FAQ Section */
+.faq-section {
+    background-color: #fff;
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.faq-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.faq-item {
+    background-color: var(--background-light);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.faq-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-item h3::after {
+    content: '+';
+    font-size: 1.5rem;
+    transition: transform 0.2s ease;
+}
+
+.faq-item.active h3::after {
+    transform: rotate(45deg);
+}
+
+.faq-item p {
+    color: var(--text-color-light);
+    margin-top: 10px;
+    display: none; /* Hidden by default */
+}
+
+.faq-item.active p {
+    display: block; /* Show when active */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    color: var(--text-color-light);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 50px;
+    background-color: var(--background-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero-main-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text-content {
+        max-width: 100%; /* 在小屏幕上文字内容占满宽度 */
+    }
+    .hero-section h1 {
+        font-size: 2.8rem;
+    }
+    .hero-section .subtitle {
+        font-size: 1.1rem;
+    }
+    .hero-image-placeholder {
+        min-height: 300px; /* 调整图片占位符高度 */
+        margin-top: 30px; /* 文字和图片之间增加间距 */
+    }
+    .content-wrapper {
+        flex-direction: column;
+    }
+    .left-panel, .right-panel {
+        flex: none;
+        width: 100%;
+    }
+    .steps-grid, .cases-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 60px 15px;
+    }
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .hero-section .subtitle {
+        font-size: 1rem;
+    }
+    .hero-image-placeholder {
+        min-height: 200px; /* 进一步调整图片占位符高度 */
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    .card {
+        padding: 20px;
+    }
+    .upload-area {
+        padding: 20px;
+    }
+    .garment-grid {
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    }
+    .action-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .action-buttons .btn {
+        width: 100%;
+    }
+    h2 { font-size: 1.7rem; }
+    h3 { font-size: 1.3rem; }
+}

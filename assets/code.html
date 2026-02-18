@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>V-Style AI - Virtual Try-On Platform</title>
+<meta content="Experience hyper-realistic virtual try-ons with V-Style AI." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256af4",
+                        "primary-dark": "#1a4dbf",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Nunito", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>.glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .dark .glass-nav {
+            background: rgba(16, 22, 34, 0.8);
+        }html {
+            scroll-behavior: smooth;
+        }.text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #256af4, #60a5fa);
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-100 transition-colors duration-300">
+<nav class="fixed w-full z-50 glass-nav border-b border-gray-200 dark:border-gray-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-20 items-center">
+<div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-extrabold">V</div>
+<span class="font-extrabold text-xl tracking-tight text-gray-900 dark:text-white">V-Style AI</span>
+</div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-bold" href="#how-it-works">How It Works</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-bold" href="#features">Features</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-bold" href="#showcase">Showcase</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-bold" href="#">Pricing</a>
+</div>
+<div class="hidden md:flex">
+<button class="bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40">
+                    Get Started
+                </button>
+</div>
+<div class="md:hidden flex items-center">
+<button class="text-gray-600 dark:text-gray-300 hover:text-primary focus:outline-none">
+<span class="material-icons-round text-3xl">menu</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
+<div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-blue-400/10 rounded-full blur-3xl"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold mb-6">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                    v2.0 Now Available
+                </div>
+<h1 class="text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-[1.1] mb-6">
+                    Your Dream Wardrobe, <br/>
+<span class="text-gradient">Just a Click Away</span>
+</h1>
+<p class="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed max-w-lg font-medium">
+                    Experience hyper-realistic virtual try-ons. Upload your photo and explore infinite styles in seconds without ever stepping into a fitting room.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl text-base font-bold transition-all shadow-xl shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-1 flex items-center justify-center gap-2">
+                        Try It For Free
+                        <span class="material-icons-round text-sm">arrow_forward</span>
+</button>
+<button class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 px-8 py-4 rounded-xl text-base font-bold transition-all flex items-center justify-center gap-2">
+<span class="material-icons-round text-primary">play_circle</span>
+                        Watch Demo
+                    </button>
+</div>
+<div class="mt-10 flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400 font-medium">
+<div class="flex -space-x-2">
+<img alt="User Avatar 1" class="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-background-dark object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3YZdar3NSfNExkyTR7j2N8Gs9BAF0RyUCYnW9r7XGGlUUIFyqJuE6FQZkicPLNCvKL6H19QD_BW0h04I2N8TctM65xsVYS4-Eif0jZ6NuH7yquFen9SWC_Klw26VqddurhVtj9e87fMpNuzQS7ikFABK0fhrDbhAEcTZQmCHGD9IUN0Rtj98YcY_c1ZqDpfNIPaqB-bpuo-hj6MRziu27yU1DfbEVBxh-PZocksJuRfTfmcmtGjO5G_hOa9Iq3lU-Y9C6wrlVMpCi"/>
+<img alt="User Avatar 2" class="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-background-dark object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbMgFj7q88-ere8vk7wfrFik_kDRT1VEEJorhph729WUfcuPzXxpZa_XGo0P7gcL7IddU-othcfsriBJxa6GN-00zgVFr5Myu4I5BFXjp_sW_IWMl84FQ5BFj39irJzeHmIQXDTABabVgtqb9zmLmBSOui7e4g5uMdOpLbN5i9rJMEanRoO3KF1NpYd9sHVsPE_hYPZktZ1lg_vHFL8h5zRrvPDv2s9tV-KCcq_jPHYRmmNiTTO54P7vft8nBfQuDuZ3iM8E2q4q0S"/>
+<img alt="User Avatar 3" class="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-background-dark object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDygyoNuy_xeKAg8aRclTpWvylBUVeg9xx3SlWu6W59YV81qp4vPCB8jJRb5YMpsW4R3NbsgNY8wtDT3xX4bWcMvrLURRszwFV_a7b8xsXYEKUrw-SPWT4URZpI_cEYwLwu7K3YwzSUgN23KHYH7Qb6wvnDBGHAYfcND9MNylrLxf_hSnohi_6XDLoLDR-cPpdiW2VNAeY5ippUCMtZHPyrL4ffOJYea3mHVGxV_PllUIvkjiTvvzIS9LeEQHrZOz-kAcF0bCmSG-AV"/>
+</div>
+<p>Join 10,000+ early adopters</p>
+</div>
+</div>
+<div class="relative lg:h-[600px] h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-800 group">
+<div class="absolute inset-0 w-full h-full">
+<img alt="Model wearing stylish yellow outfit" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHJpiPCMHwK0UvMupcbuiGDDvmiwN9jUmYp2YIupImx8Qf1P9IRsIFVxHWNgUQZGOhwHoOu-G7Y23jvZzsr4mU306e-h4jeNg8EGZ8rEry6k6dVWxpCOy11s6oA1QCbsSlfUn5NW_CeluhDRMA-H0vYedpfeo1ANACqsNf2i-vJKvNaBPAbCDcI_N5NmvJuJWMpdssJzzygaUa3U-WDIfnMG7QKk8livjawLJz5z9t_1PcUastbTRMfALQTxqHviY-B21HXyWV5aVF"/>
+<div class="absolute top-6 right-6 bg-white/90 backdrop-blur-md px-3 py-1 rounded-lg text-xs font-extrabold text-primary shadow-sm">
+                        AFTER: V-STYLE AI
+                    </div>
+</div>
+<div class="absolute inset-y-0 left-0 w-1/2 overflow-hidden border-r-4 border-white z-10 transition-all duration-500 ease-in-out group-hover:w-[40%]">
+<img alt="Model wearing casual t-shirt" class="absolute inset-0 w-[200%] max-w-none h-full object-cover object-left" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4s1YFBwJcpcbhOxzIbz1Cd3LdDKXKifA3s7Kfs43-gUDmBqQl3NdaZtOLjcXZ4C1OmnvJzbyfo9setssUF-fiUIGnhmLywgi0DlAUY_kvAhdLNPdX7uNkrET0nZgnJhaYTGVdo9bdf1pXXp9pOL8TUsny_DNmAt-WPEbecFVR8xEUO8Oyn3POhnTpjvLT2ZpKsWXyQEh-a5f-iy2Rru1qH-0RZPflSCzJbtTyRDKEMTgrX1MRrDRiw8TMjyEG64Wfaj8rs0-x7AET"/>
+<div class="absolute top-6 left-6 bg-black/50 backdrop-blur-md px-3 py-1 rounded-lg text-xs font-extrabold text-white shadow-sm">
+                        BEFORE
+                    </div>
+</div>
+<div class="absolute inset-y-0 left-1/2 -ml-6 w-12 h-12 top-1/2 -mt-6 bg-white rounded-full shadow-xl z-20 flex items-center justify-center cursor-ew-resize transition-all duration-500 ease-in-out group-hover:left-[40%]">
+<span class="material-icons-round text-primary">code</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-white dark:bg-gray-900" id="how-it-works">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4">How V-Style Works</h2>
+<p class="text-gray-600 dark:text-gray-400 font-medium">Transform your look in three simple steps. Our AI handles the physics, lighting, and fit for a perfect result.</p>
+</div>
+<div class="relative grid md:grid-cols-3 gap-8">
+<div class="hidden md:block absolute top-12 left-[16%] right-[16%] h-0.5 bg-gray-200 dark:bg-gray-700 -z-10"></div>
+<div class="relative flex flex-col items-center text-center group">
+<div class="w-24 h-24 bg-white dark:bg-gray-800 border-2 border-gray-100 dark:border-gray-700 rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:border-primary transition-colors duration-300">
+<span class="material-icons-round text-4xl text-gray-400 group-hover:text-primary transition-colors">add_a_photo</span>
+</div>
+<div class="bg-white dark:bg-gray-900 px-2">
+<h3 class="text-xl font-extrabold text-gray-900 dark:text-white mb-2">1. Upload</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed font-medium">Take a selfie or upload a full-body photo. Best results with clear lighting.</p>
+</div>
+</div>
+<div class="relative flex flex-col items-center text-center group">
+<div class="w-24 h-24 bg-white dark:bg-gray-800 border-2 border-gray-100 dark:border-gray-700 rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:border-primary transition-colors duration-300">
+<span class="material-icons-round text-4xl text-gray-400 group-hover:text-primary transition-colors">checkroom</span>
+</div>
+<div class="bg-white dark:bg-gray-900 px-2">
+<h3 class="text-xl font-extrabold text-gray-900 dark:text-white mb-2">2. Choose</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed font-medium">Select from thousands of trending items or upload a product image URL.</p>
+</div>
+</div>
+<div class="relative flex flex-col items-center text-center group">
+<div class="w-24 h-24 bg-white dark:bg-gray-800 border-2 border-gray-100 dark:border-gray-700 rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:border-primary transition-colors duration-300">
+<span class="material-icons-round text-4xl text-primary animate-pulse">auto_fix_high</span>
+</div>
+<div class="bg-white dark:bg-gray-900 px-2">
+<h3 class="text-xl font-extrabold text-gray-900 dark:text-white mb-2">3. Transform</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed font-medium">Watch as our AI realistically drapes the clothing onto your photo instantly.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-background-light dark:bg-background-dark" id="features">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div class="mb-8 lg:mb-0">
+<h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-6">
+                    Why V-Style AI is <br/>
+<span class="text-primary">Different</span>
+</h2>
+<p class="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-md font-medium">
+                    We don't just paste images. Our proprietary Generative Adversarial Networks understand 3D body geometry and fabric drape.
+                </p>
+<a class="inline-flex items-center text-primary font-bold hover:text-primary-dark transition-colors" href="#">
+                    Explore Technology
+                    <span class="material-icons-round ml-1 text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid sm:grid-cols-2 gap-4">
+<div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-transparent hover:border-primary/20">
+<div class="w-12 h-12 rounded-lg bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center mb-4">
+<span class="material-icons-round text-primary text-2xl">science</span>
+</div>
+<h3 class="font-extrabold text-lg text-gray-900 dark:text-white mb-2">Hyper-Realistic AI</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 font-medium">Advanced fabric physics simulation ensures clothes fold and drape naturally.</p>
+</div>
+<div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-transparent hover:border-primary/20">
+<div class="w-12 h-12 rounded-lg bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center mb-4">
+<span class="material-icons-round text-primary text-2xl">bolt</span>
+</div>
+<h3 class="font-extrabold text-lg text-gray-900 dark:text-white mb-2">Instant Styling</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 font-medium">Generate complete outfits in under 2 seconds with our optimized engine.</p>
+</div>
+<div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-transparent hover:border-primary/20">
+<div class="w-12 h-12 rounded-lg bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center mb-4">
+<span class="material-icons-round text-primary text-2xl">share</span>
+</div>
+<h3 class="font-extrabold text-lg text-gray-900 dark:text-white mb-2">Download &amp; Share</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 font-medium">Get high-resolution outputs ready for Instagram, TikTok, or your portfolio.</p>
+</div>
+<div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-transparent hover:border-primary/20">
+<div class="w-12 h-12 rounded-lg bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center mb-4">
+<span class="material-icons-round text-primary text-2xl">collections_bookmark</span>
+</div>
+<h3 class="font-extrabold text-lg text-gray-900 dark:text-white mb-2">Personal Collection</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 font-medium">Save your favorite looks and build a digital wardrobe for future reference.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-white dark:bg-gray-900" id="showcase">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12">
+<div>
+<h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-2">Style Showcase</h2>
+<p class="text-gray-600 dark:text-gray-400 font-medium">Explore generated results across different fashion categories.</p>
+</div>
+<div class="flex flex-wrap gap-2 mt-6 md:mt-0">
+<button class="bg-primary text-white px-4 py-1.5 rounded-full text-sm font-bold transition-all">All</button>
+<button class="bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 px-4 py-1.5 rounded-full text-sm font-bold transition-all">Streetwear</button>
+<button class="bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 px-4 py-1.5 rounded-full text-sm font-bold transition-all">Formal</button>
+<button class="bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 px-4 py-1.5 rounded-full text-sm font-bold transition-all">Casual</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 h-[600px] lg:h-[500px]">
+<div class="relative rounded-xl overflow-hidden group md:col-span-2 lg:col-span-1 lg:row-span-2">
+<img alt="Streetwear fashion model" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-FPd4UnTEmRnmMll8go7VqUQmbVGEAeVUBuNKSEAWMLkjnZFcVcbDZo0ar9o7kiY4nmME136xkHb6ngvMAAN2N9RQqs7ZseX1NAjCu5lHbZYZYk0K97O7RqbI4RnCssD55JpF23M1Z65pDcY4A0l39Fn5qxNyBBhDEECG9v8JMf0CxoNkUG7qg-pRi8RIvGNoVeXMSyLY1FTOCAKT9HbVbcc8D1QAmyBy-0sX2xU4SFvTQ7ngohnNqOw4oDo7Cdij8A4ztg4LW8XU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+<div>
+<span class="text-xs font-extrabold text-primary uppercase tracking-wider mb-1 block">Streetwear</span>
+<h4 class="text-white font-extrabold">Urban Tech Fit</h4>
+</div>
+</div>
+</div>
+<div class="relative rounded-xl overflow-hidden group">
+<img alt="Formal dress model" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbw6DMdOKs0a--4gPN_kycRjx_0pvo46Lu8RwzTI11Cf_h-iOKF2xID84POacEoiNxcTvu-x138E0z94ZVqNt6LMK0RvD5RLv7MAzrsUqJZx32K0LGxvn96QOmjKNEVlN9a-cigEfw8P_LVoabJuBXovLc0wvy1z2VnjT0ELaT_cd02Bi0J5CIobjF5Nm9DEaIkJm6QX8YstqAlH4edXzng67bNg8zTAKpeAaH57G2jZKUbMrPCoo5OzE6p7iyfdIhU2LN6m4ow9-A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+<div>
+<span class="text-xs font-extrabold text-primary uppercase tracking-wider mb-1 block">Formal</span>
+<h4 class="text-white font-extrabold">Gala Evening</h4>
+</div>
+</div>
+</div>
+<div class="relative rounded-xl overflow-hidden group md:col-span-2 lg:col-span-2">
+<img alt="High fashion model walking" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmeFPWhbbL-Hg1-j6LQtGqt7F5wlmvXYhIvLTfn9VXKoZmxUg_1mQbkL1lk_sKGVERXfNeOFS_M10A3LqCyJQ59Bb9pXOsxIZ2Z0MHw2U2XbdGeHoGejeZ_iRL4-c8KnjmVJLxzll-m9IxytErAQjeItzi4_khWR2YsQ6p0-jbz3MSrZKIUwWSTg8I07EE0hk8yrjMpDKzCo4DbjNPhkB5aQH4KU-UqBOnn9ZEvHpjrppAty4FJDHgOhD7bIvpT-gB-Htx-zwQ0Lj2"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+<div>
+<span class="text-xs font-extrabold text-primary uppercase tracking-wider mb-1 block">Avant-Garde</span>
+<h4 class="text-white font-extrabold">Fall Collection 2024</h4>
+</div>
+</div>
+</div>
+<div class="relative rounded-xl overflow-hidden group lg:col-span-1">
+<img alt="Casual summer outfit" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3TeaoqkGF0je4TM1R_UKMKbPnyAMTsQHm0ZFy2nhOmSmMcV0GgTqVsTaBZGqtceJ-zP61MWIqQC5sbVd0otrJrlgf_WPNF258rHizgw9Gr3ciuFMNnCH5dT6Vghgsd-q5C3MgIoszCpI38n282dTBSx4KXbOM3W7VoBy9jdWoS4X2v21VywQb2kC1Xb83HZEAkzHlV6_etyYbYoum_IJDcAwLESzy-oYFDJtD0oQE-T2Zp4uKSKGK_JEiaGforq_qNDlanhicmvM5"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+<div>
+<span class="text-xs font-extrabold text-primary uppercase tracking-wider mb-1 block">Casual</span>
+<h4 class="text-white font-extrabold">Summer Breeze</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-primary rounded-2xl p-10 md:p-16 text-center relative overflow-hidden shadow-2xl">
+<div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-white opacity-10 rounded-full"></div>
+<div class="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 bg-white opacity-10 rounded-full"></div>
+<h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6 relative z-10">Ready to revolutionise your style?</h2>
+<p class="text-blue-100 mb-8 max-w-2xl mx-auto text-lg relative z-10 font-medium">Join thousands of users who are already experiencing the future of fashion. No credit card required.</p>
+<div class="relative z-10">
+<button class="bg-white text-primary hover:bg-blue-50 px-8 py-3.5 rounded-lg text-base font-extrabold transition-colors shadow-lg">
+                    Get Started Now
+                </button>
+<p class="text-blue-200 text-sm mt-4 font-medium">Free 7-day trial • Cancel anytime</p>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-6 h-6 bg-primary rounded flex items-center justify-center text-white font-extrabold text-xs">V</div>
+<span class="font-extrabold text-lg text-gray-900 dark:text-white">V-Style AI</span>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-sm mb-6 font-medium">
+                    The world's most advanced virtual try-on technology, making fashion accessible to everyone, everywhere.
+                </p>
+<div class="flex space-x-4">
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-icons-round">facebook</span></a>
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-icons-round">photo_camera</span></a>
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-icons-round">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-extrabold text-gray-900 dark:text-white mb-4">Product</h4>
+<ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400 font-medium">
+<li><a class="hover:text-primary transition-colors" href="#">Features</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Integration</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Pricing</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Showcase</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-extrabold text-gray-900 dark:text-white mb-4">Company</h4>
+<ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400 font-medium">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Blog</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-extrabold text-gray-900 dark:text-white mb-4">Stay Updated</h4>
+<p class="text-sm text-gray-600 dark:text-gray-400 mb-4 font-medium">Get the latest updates on AI fashion trends.</p>
+<form class="flex flex-col gap-2">
+<input class="w-full px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary text-sm text-gray-900 dark:text-white font-medium" placeholder="Enter your email" type="email"/>
+<button class="w-full bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg text-sm font-bold transition-colors" type="submit">
+                        Subscribe
+                    </button>
+</form>
+</div>
+</div>
+<div class="border-t border-gray-100 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-sm text-gray-500 dark:text-gray-500 font-medium">© 2023 V-Style AI Inc. All rights reserved.</p>
+<div class="flex space-x-6 mt-4 md:mt-0 text-sm text-gray-500 dark:text-gray-500 font-medium">
+<a class="hover:text-primary" href="#">Terms</a>
+<a class="hover:text-primary" href="#">Privacy</a>
+<a class="hover:text-primary" href="#">Cookies</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>
